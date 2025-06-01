@@ -1,5 +1,6 @@
 <script setup>
 import { reactive } from 'vue';
+import { fromData1, fromData2 } from './assets/data.js';
 const fromData = reactive({
   invoiceFrom: '',
   billTo: '',
@@ -150,6 +151,12 @@ function calculateBalanceDue() {
             </div>
             <button type="button" @click="addLineItem" class="btn btn-success btn-sm add-line-btn">
                 + Line Item
+            </button>
+            <button type="button" @click="Object.assign(fromData, fromData1)" class="btn btn-success btn-sm add-line-btn">
+                Add Link 2
+            </button>
+            <button type="button" @click="Object.assign(fromData, fromData2)" class="btn btn-success btn-sm add-line-btn">
+                + Add line 3
             </button>
 
             <hr />
